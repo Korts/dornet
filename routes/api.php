@@ -14,6 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::get('/reviews/all', function () {
+    return 'все';
+});
+Route::get('/reviews/{id}', function ($id) {
+    return 'один-'.$id;
+});
+Route::post('/reviews/new', function () {
+    return 'новый';
 });
